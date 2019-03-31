@@ -18,7 +18,7 @@ LeadershipData <- na.omit(LeadershipData)
 #Conduct data explorations and test statistical assumptions 
 
 
-#create a bar chart without advertising broken out
+#create a bar chart
 bar <- ggplot(LeadershipData, aes(Gender, ValuesDomain))
 bar + stat_summary(fun.y = mean, geom = "bar", position ="dodge") + stat_summary(fun.data = mean_cl_normal, geom = "errorbar", position = position_dodge(width = 0.90), width = 0.2) + labs(x = "Gender", y = "Values Score")
 
